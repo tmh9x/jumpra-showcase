@@ -15,6 +15,14 @@ The groundwork every multi-tenant SaaS needs is done – so you jump straight to
 >
 > **Status:** in active development · waitlist coming soon · last updated November 2026
 
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/overview-dark.jpg">
+  <img src="screenshots/overview-light.jpg" alt="Organization overview: key numbers, projects per day, plan and usage, recent activity">
+</picture>
+
+<sub>Organization overview with sample data – key numbers, projects per day, plan and usage, recent activity.</sub>
+
 ---
 
 ## What it is
@@ -48,6 +56,101 @@ A module that is off costs nothing at runtime, and turning it on later needs no 
 - `AGENTS.md` / `CLAUDE.md` with project rules
 - Agent skills, e.g. *add a tenant-scoped resource*, *add a permission*, *add a plan feature*
 - Cursor rules pointing to the same conventions
+
+## Screenshots
+
+All screenshots show sample data. They follow your GitHub theme (light or dark).
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/sign-in-dark.jpg">
+  <img src="screenshots/sign-in-light.jpg" alt="Sign-in: E-mail and password, passkey or e-mail link; Google and GitHub optional">
+</picture>
+
+**Sign-in** – E-mail and password, passkey or e-mail link; Google and GitHub optional
+
+</td>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/projects-dark.jpg">
+  <img src="screenshots/projects-light.jpg" alt="Projects: The example tenant-scoped resource, with the plan limit and CSV export">
+</picture>
+
+**Projects** – The example tenant-scoped resource, with the plan limit and CSV export
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/members-dark.jpg">
+  <img src="screenshots/members-light.jpg" alt="Members and roles: Invite people, change roles, transfer ownership within the seat limit">
+</picture>
+
+**Members and roles** – Invite people, change roles, transfer ownership within the seat limit
+
+</td>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/billing-dark.jpg">
+  <img src="screenshots/billing-light.jpg" alt="Billing: Current plan, every plan's limits and features; checkout and portal via Stripe">
+</picture>
+
+**Billing** – Current plan, every plan's limits and features; checkout and portal via Stripe
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/operator-dark.jpg">
+  <img src="screenshots/operator-light.jpg" alt="Operator dashboard: MRR and revenue net of tax and refunds, customers and plans across organizations">
+</picture>
+
+**Operator dashboard** – MRR and revenue net of tax and refunds, customers and plans across organizations
+
+</td>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/audit-dark.jpg">
+  <img src="screenshots/audit-light.jpg" alt="Audit log: Who changed members, roles, invitations and billing, and when">
+</picture>
+
+**Audit log** – Who changed members, roles, invitations and billing, and when
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/settings-dark.jpg">
+  <img src="screenshots/settings-light.jpg" alt="Organization settings: Name and address, all data as one JSON file, deletion">
+</picture>
+
+**Organization settings** – Name and address, all data as one JSON file, deletion
+
+</td>
+<td width="50%" valign="top">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="screenshots/account-dark.jpg">
+  <img src="screenshots/account-light.jpg" alt="Account: Passkeys, 2FA with backup codes, organizations, data export and deletion">
+</picture>
+
+**Account** – Passkeys, 2FA with backup codes, organizations, data export and deletion
+
+</td>
+</tr>
+</table>
 
 ## Why "for EU teams"
 
