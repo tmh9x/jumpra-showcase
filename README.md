@@ -13,7 +13,7 @@ The groundwork every multi-tenant SaaS needs is done – so you jump straight to
 
 > **This is the public showcase repository.** jumpra is a commercial product, so its source code lives in a private repository. This page describes what it includes, how it is built and the engineering decisions behind it.
 >
-> **Status:** in active development · waitlist coming soon
+> **Status:** in active development · waitlist coming soon · last updated November 2026
 
 ---
 
@@ -24,21 +24,42 @@ Most SaaS products start with the same weeks of work: sign-in, organizations, ro
 ## Features
 
 **Always on (core)**
-- E-mail/password sign-in, optional Google and GitHub OAuth
-- Organizations with roles and invitations
-- Multi-tenant data model with an example tenant-scoped resource
-- Role-based permissions (RBAC)
+- Sign-in with e-mail and password, e-mail verification, password reset, magic links, passkeys, two-factor authentication and rate limiting
+- Organizations with owner, admin and member roles, invitations and ownership transfer
+- Tenant isolation: every query for tenant data runs through the organization's context
+- An example tenant-scoped resource to build your own features on
+- Audit log, data export and account/organization deletion
 - Dashboard UI built on shadcn/ui and Tailwind CSS 4
 
 **Optional modules** – stay off until their environment variables are set
-- Stripe billing per organization, with plan limits and entitlements
-- AI features, analytics, monitoring
-- Operator dashboard
+- Stripe billing per organization: plans, limits, feature flags, optional per-seat pricing
+- Stripe as seller of record (Stripe Managed Payments)
+- Google and GitHub sign-in
+- AI assistant per organization
+- Cookieless analytics (Plausible, Umami or Pirsch)
+- Error reporting to your monitoring
+- Operator dashboard with revenue and customers across all organizations
+- Postgres row-level security as a second safety net
+- German interface and e-mails
+
+A module that is off costs nothing at runtime, and turning it on later needs no merge.
 
 **Built for AI coding agents**
 - `AGENTS.md` / `CLAUDE.md` with project rules
 - Agent skills, e.g. *add a tenant-scoped resource*, *add a permission*, *add a plan feature*
 - Cursor rules pointing to the same conventions
+
+## Why "for EU teams"
+
+Selling software in Europe brings extra work that most starter kits leave to you. jumpra prepares the technical side:
+
+- **VAT handled by Stripe** – with Stripe Managed Payments, Stripe sells to your customers as seller of record and calculates, collects and remits indirect taxes such as VAT
+- **Privacy-friendly analytics** – cookieless trackers, including EU-hosted or self-hosted options
+- **Data subject features built in** – data export, account and organization deletion and an audit log are part of the core
+- **German out of the box** – interface and e-mails can be switched to German
+- **Self-hostable** – a Docker reference deployment runs on any server, including EU hosting
+
+jumpra gives you the technical building blocks; whether your product meets legal requirements such as the GDPR is still something to have checked for your case.
 
 ## Quality and security
 
@@ -94,6 +115,10 @@ flowchart LR
 - **Tenant isolation is tested, not assumed.** Security tests in CI check that data and permissions stay within an organization.
 - **Rules that machines can check.** Conventions are encoded as lint rules and import boundaries rather than only written down – that is what makes AI-assisted development on top of the kit safe.
 - **Separate buyer export.** Internal planning and docs stay in the development repository; buyers receive a clean, documented release with a changelog and upgrade notes.
+
+## Interested?
+
+jumpra is not on sale yet. If you'd like to hear when it launches, or want to talk about it, write to [thomas.hermanu@gmail.com](mailto:thomas.hermanu@gmail.com?subject=jumpra). A waitlist page is coming soon.
 
 ## Built by
 
